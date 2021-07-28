@@ -54,7 +54,13 @@ export default function SignUp() {
         </AreaInput>
 
         <SubmitButton onPress={handleSignUp}>
-            <SubmitText>Cadastrar</SubmitText>
+          {
+            loadingAuth ? (
+              <ActivityIndicator size={20} color="#fff"/>
+            ) : (
+              <SubmitText>Cadastrar</SubmitText>
+            )
+          }             
         </SubmitButton>
 
       </Container>
