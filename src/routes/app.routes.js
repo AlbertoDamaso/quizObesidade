@@ -10,7 +10,11 @@ const AppStack = createStackNavigator();
 export default function AppRoutes(){
      return(
          <AppStack.Navigator>
-            <AppStack.Screen name="Home" component={Home}/>
+            <AppStack.Screen 
+                name="Home" 
+                component={Home} 
+                options={{headerShown: false}}
+            />
             <AppStack.Screen name="Quiz" component={Quiz}/>
             <AppStack.Screen name="ResultQuiz" component={ResultQuiz}/>
          </AppStack.Navigator>
